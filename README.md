@@ -1,4 +1,4 @@
-# Airbnb JavaScript Style Guide() {
+# Alliance Software JavaScript Style Guide() {
 
 *A mostly reasonable approach to JavaScript*
 
@@ -310,6 +310,8 @@ Other Style Guides
     // good
     const items = [];
     ```
+
+    The only time you may need to violate this is if you need an Array created of fixed size, eg. `new Array(5)` but this should be rare.
 
   - [4.2](#4.2) <a name='4.2'></a> Use Array#push instead of direct assignment to add items to an array.
 
@@ -1203,6 +1205,8 @@ Other Style Guides
 ## Comparison Operators & Equality
 
   - [15.1](#15.1) <a name='15.1'></a> Use `===` and `!==` over `==` and `!=`. eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq.html)
+
+    It is fine to use `==`/`!=` to compare against null, compare two literal values and comparing against null (`smart` rule setting)
 
   - [15.2](#15.2) <a name='15.2'></a> Conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract method and always follow these simple rules:
 
