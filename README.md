@@ -302,7 +302,7 @@
     const items = [];
     ```
 
-    The only time you may need to violate this is if you need an Array created of fixed size, eg. `new Array(5)` but this should be rare.
+    If you need to create array's of fixed size up front use [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from), eg. `Array.from({length: 10}, () => 0)`
 
   - [4.2](#4.2) <a name='4.2'></a> Use Array#push instead of direct assignment to add items to an array.
 
